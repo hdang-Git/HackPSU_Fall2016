@@ -1,0 +1,23 @@
+{
+  "name": "watermelon",
+  "version": "1.0.0",
+  "description": "watermelon time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdang-Git/HackPSU_Fall2016.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdang-Git/HackPSU_Fall2016/issues"
+  },
+  "homepage": "https://github.com/hdang-Git/HackPSU_Fall2016#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1"
+  }
+}
