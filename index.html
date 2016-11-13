@@ -5,18 +5,33 @@
     <title>Dashboard</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="/bower_components/angular/angular.js"></script>
+    <!--
+    <script src="bower_components\chart.js\dist\Chart.min.js"></script>
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js" type="text/javascript"></script>
+
     <script src="app/js/accuweather.js"></script>
+
 </head>
 
-<body>
-<div ng-app="myApp" ng-controller="myCtrl">
+<body ng-app="myApp">
+<div  ng-controller="myCtrl">
     <p>{{content}}</p>
 </div>
-    <div class = "container-fluid">
-        <a class="btn btn-default" href="#" role="button">Link</a>
-        <button class="btn btn-default" type="submit">Button</button>
-        <input class="btn btn-default" type="button" value="Input">
-        <input class="btn btn-default" type="submit" value="Submit">
-    </div>
+
+<div class = "container">
+    <canvas id="myChart" width="640" height="468" ></canvas>
+</div>
+
+<div class = "container">
+    <canvas id="radarChart" width="640" height="468"></canvas>
+</div>
+
+<div class = "container-fluid">
+    <a class="btn btn-default" href="#" role="button">Link</a>
+    <button class="btn btn-default" type="submit">Button</button>
+    <input class="btn btn-default" type="button" value="Input">
+    <input class="btn btn-default" type="submit" value="Submit">
+</div>
 </body>
 </html>
