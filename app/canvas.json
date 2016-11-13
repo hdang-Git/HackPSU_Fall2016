@@ -8,25 +8,29 @@
       "id": 0,
       "name": "Potions",
       "grade": "A",
-      "points": "963/1000"
+      "points": "680",
+      "total": "1000"
     },
     {
       "id": 1,
       "name": "Dark Arts",
       "grade": "B-",
-      "points": "840/1100"
+      "points": "840",
+      "total": "1100"
     },
     {
       "id": 2,
       "name": "Intro to Bioengineering",
       "grade": "C",
-      "points": "729/1232"
+      "points": "729",
+      "total": "1232"
     },
     {
       "id": 3,
       "name": "Transmortigration",
       "grade": "A",
-      "points": "1120/1120"
+      "points": "1120",
+      "total": "1120"
     }
   ]
 }
