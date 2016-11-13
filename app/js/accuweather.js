@@ -1,6 +1,7 @@
 var app = angular.module('myApp', []);
 var temp = null;
 var precip = null;
+var scarf = null;
 app.controller('myCtrl', function($scope, $http) {
     $http.get("http://apidev.accuweather.com/forecasts/v1/hourly/12hour/335315?apikey=PSUHackathon112016")
     .then(function(response) {
@@ -10,20 +11,24 @@ app.controller('myCtrl', function($scope, $http) {
             precip = $scope.precip;
             weatherCheck();
             clothesCheck();
+            stuff();
     });
 });
 
-function weatherCheck(){
+var weatherCheck = function(){
     if(temp >= 40 && temp <- 80 && precip <= 10){
-        console.log("YO RUN DAWG IT'S GOOD OUT");
+        console.log("YO RUN DAWG IT'S GOOD OUT" + temp);
     } else {
-        console.log("NOTHING Don't do it");
+        console.log("NOTHING Don't do it" + temp);
+        console.log("NOTHING Don't do it" + precip);
     }
 }
 
-function clothesCheck() {
+var clothesCheck = function() {
     if(precip > 22 && precip < 29) {
-        console.log("Scarf");
+        console.log("Scarf1");
+        scarf =1;
+        console.log("SCARF:" + scarf);
         }
     if(precip > 12 && precip < 21) {
         console.log("Umbrella");
@@ -32,7 +37,9 @@ function clothesCheck() {
         console.log("Shades");
     }
     if(temp < 40) {
-        console.log("Scarf");
+        console.log("Scarf2");
+        scarf = 1;
+        console.log(scarf)
     }
     if(temp > 80) {
         console.log("Shorts");
@@ -58,15 +65,14 @@ var pieData = [
                 color : "#FFEA88"
             }
         ];
-window.onload = function(){
-        // Get the context of the canvas element we want to select
-        var myChart= document.getElementById("myChart").getContext("2d");
-        new Chart(myChart).Pie(pieData);
 
-
-//Create Radar chart
-var ctx2 = document.getElementById("radarChart").getContext("2d");
-var myNewChart = new Chart(ctx2).Radar(radarData);
+var stuff = function(){//window.onload = function(){
+    // Get the context of the canvas element we want to select
+    var myChart= document.getElementById("myChart").getContext("2d");
+    new Chart(myChart).Pie(pieData);
+    //Create Radar chart
+    var ctx2 = document.getElementById("radarChart").getContext("2d");
+    var myNewChart = new Chart(ctx2).Radar(radarData);
 }
 
 //radar chart data
