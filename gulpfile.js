@@ -18,4 +18,5 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', ['browser-sync'], function() {
     gulp.watch("*.html").on('change', reload);
     gulp.watch("app/*.html").on('change', reload);
+    gulp.watch("app/js/*.js").on("change", reload);
 });
